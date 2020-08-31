@@ -1,0 +1,114 @@
+.newsletter {
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  padding: 4.000em 0em ;
+  text-align: center;
+
+  &__details {
+    max-width: 453px;
+    margin: auto;
+  }
+
+  h3 {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2.3em;
+  }
+
+  h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 2em;
+  }
+    
+  input {
+    border: 0;
+    outline: 0;
+    width: 300px;
+    padding: 1.2em 1.3em;
+    border-radius: 5px;
+    margin-right: 1em;
+  }
+
+  .form {
+    margin-top: 2.4em;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+
+    @include respond(ipads) { 
+      flex-direction: column;
+      align-items: center;   
+     }
+    .svgimage {
+      position: absolute;
+      left: 58%;
+      top: 13px;
+      width: 20px;
+      display: none;
+
+      @include respond(ipads) { 
+        left: 75%;
+         
+       }
+      
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  span {
+    display: none;
+    text-align: left;
+    background-color: hsl(0, 94%, 66%);
+    width: 300px;
+    padding: 10px;
+    font-size: 0.5em;
+    font-style: italic;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+  
+::placeholder {
+  color: #dfdfdf;
+}
+
+.red-btn {
+  font-size: 0.8em;
+  cursor: pointer;
+  color: white;
+  padding: 13px 23px;
+  background-color: hsl(0, 94%, 66%);
+  border: 2px solid hsl(0, 94%, 66%)!important;
+  border-radius: 5px;
+  transition: .2s ease-in;
+
+  &:hover {
+    background: white;
+    color : hsl(0, 94%, 66%)
+  }
+  @include respond(ipads) { 
+    margin-top: 20px;
+     
+   }
+}
+
+input.error {
+  border: 2px solid hsl(0, 94%, 66%);
+  border-bottom: none;
+}
+
+span.error {
+  display : block;
+}
+
+
+.form .form__details .svgimage.error {
+  display: block;
+}

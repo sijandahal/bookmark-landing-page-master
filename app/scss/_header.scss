@@ -1,0 +1,103 @@
+.header {
+  position: relative;
+  margin : 100px 0px 80px 0px;
+  
+ .container {;
+   width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   @include respond(tab-land) {
+    max-width: 960px;
+    width: 100%;
+   }
+
+   @include respond(tab-port) {
+    max-width: 768px;
+    width: 100%;
+  }
+  
+  @include respond(ipads) {
+    max-width: 460px;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+ 
+ }
+}
+
+.header__left {
+   max-width : 500px;
+   width: 100%;
+   margin-right: 80px;
+
+   @include respond(ipads) { 
+    margin-right: 0px;
+  }
+  h1 {
+    color: $Very-Dark-Blue;
+    margin-bottom: .3em;
+    
+   @include respond(ipads) { 
+   text-align: center; 
+   }
+  }
+  p {
+    color:$Grayish-Blue;
+    line-height: 30px;
+    margin-bottom: 2em;
+
+    @include respond(phone) {
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+   
+  a:first-of-type {
+    margin-right: 20px;
+  }
+
+}
+
+.header__rightimage {
+//  background-image: url(../../images/illustration-hero.svg);
+//  width: 600px;
+//  height: 400px;
+//  background-position: center;
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  margin-right: -5%;
+//  top: 0;
+width: 100%;
+}
+
+.header__right:before, .header__right:after {
+  position: absolute;
+  content: '';
+}
+
+.header__right:before {
+  background-color: hsl(231, 69%, 60%);
+  width: 34%;
+  height: 72%;
+  z-index: -555;
+  right: 0%;
+  top: 30%;
+  border-bottom-left-radius: 150px;
+
+  
+  @include respond(ipads) {
+    width: 72%;
+    height: 41%;
+    z-index: -555;
+    right: 0%;
+    top: 13%;
+  }
+}
+
+.header__right {
+  @include respond(ipads) { 
+    margin-bottom: 50px;
+  }
+}

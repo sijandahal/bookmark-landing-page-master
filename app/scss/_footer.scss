@@ -1,0 +1,74 @@
+.footer {
+  background-color: hsl(229, 31%, 21%);
+  color: white;
+  padding: 2em 0em;
+ 
+  &__holder {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    @include respond(ipads) { 
+    flex-direction: column; 
+ }
+  }
+
+  &__details {
+    display : flex;
+    align-items: center;
+
+    @include respond(ipads) { 
+      flex-direction: column; 
+   }
+    svg {
+      margin-right: 64px;
+      @include respond(ipads) { 
+        margin-right: 0px; 
+        margin-bottom: 20px;
+       }
+    }
+
+    ul {
+      @include respond(ipads) { 
+        display : flex;
+        flex-direction: column; 
+     }
+      li {
+        @include respond(ipads) { 
+          margin: 10px auto;
+           
+         }
+        a {
+          color: white;
+          padding-left: 47px;
+          transition: .2s ease-in;
+          &:hover {
+            color: hsl(0, 94%, 66%);
+          }
+          @include respond(ipads) { 
+          padding-left: 0px;
+           
+         }
+        }
+      }
+    }
+  }
+
+  &__icons {
+    svg {
+      cursor: pointer;
+      &:hover {
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+      }
+    }
+    :first-child {
+      margin-right: 40px;
+    }
+
+  }
+}
+.footer__icons {
+  @include respond(ipads) { 
+    margin-top: 30px;
+     
+   }
+}
